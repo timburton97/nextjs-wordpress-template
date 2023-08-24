@@ -19,10 +19,6 @@ export async function getStaticProps({ params }) {
 export default function Home({ pageData, menuItems }) {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Next.js/WordPress Website</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <HeaderComponent
         menuItems={menuItems}

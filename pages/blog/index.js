@@ -1,24 +1,28 @@
-import styles from '../../styles/BlogHome.module.css';
-import { getAllPosts } from "../../lib/api";
 import Head from 'next/head';
 import Link from 'next/link';
+import styles from '../../styles/BlogHome.module.css';
+import { getAllPosts, getPrimaryMenuItems } from "../../lib/api";
+import HeaderComponent from '../../components/common/header/header';
+import FooterComponent from '../../components/common/footer/footer';
 
 export async function getStaticProps() {
     const allPosts = await getAllPosts();
+    const menuItems = await getPrimaryMenuItems();
 
     return {
         props: {
             allPosts: allPosts,
+            menuItems: menuItems,
         },
     }
 }
 
-export default function BlogHome({ allPosts }) {
+export default function BlogHome({ allPosts, menuItems }) {
     return (
         <>
-            <Head>
-                <title>Blog</title>
-            </Head>
+            <HeaderComponent
+                menuItems={menuItems}
+            />
 
             <main>
                 <div className={styles.header}>
