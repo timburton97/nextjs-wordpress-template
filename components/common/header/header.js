@@ -14,11 +14,11 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
             </Head>
 
             <header>
-                <div class="flex flex-row bg-gray-900 justify-center">
+                <div class="flex flex-row bg-gray-900 justify-items-center">
                     {   
                         menuItems.map((item) => (
-                            <div class="rounded-lg h-16 justify-center justify-items-center text-white" key={item.label}>
-                                <Link href={item.path}>{item.label}</Link>
+                            <div class="flex text-white hover:bg-blue-900 duration-300 flex-grow" key={item.label}>
+                                <Link class="flex justify-center items-center p-4 h-full w-full" href={item.path}>{item.label}</Link>
                             </div>
                         ))
                     }
@@ -26,7 +26,6 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                 <div class={styles.headerContainer} style={{ backgroundImage:`url(${headerImage ? headerImage.mediaItemUrl : "/placeholder.png"})`}}>
                     <h1 class="text-4xl">{title}</h1>
                 </div>
-                
                 
             </header>
         </>
