@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from "next/link";
 import styles from '../styles/DefaultPage.module.css'
 import HeaderComponent from "../components/common/header/header";
+import placeholder from "../public/placeholder.png";
 
 export async function getStaticProps({ params }) {
     const pageData = await getSinglePage(params.slug);
@@ -37,6 +38,8 @@ export default function Page({ pageData, menuItems }) {
         <main>
             <HeaderComponent
                 menuItems={menuItems}
+                headerImage={pageData.featuredImage.node}
+                title={pageData.title}
             />
             <h1>{pageData.title}</h1>
             <div className={styles.pageContent} dangerouslySetInnerHTML={{

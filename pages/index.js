@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { getSinglePage, getPrimaryMenuItems } from '../lib/api';
 import HeaderComponent from '../components/common/header/header';
@@ -22,10 +22,13 @@ export default function Home({ pageData, menuItems }) {
 
       <HeaderComponent
         menuItems={menuItems}
+        headerImage={pageData.featuredImage.node}
+        title={pageData.title}
       />
 
       <main>
         <h1>Welcome to this Next.js/WordPress website</h1>
+
         <div className={styles.pageContent} dangerouslySetInnerHTML={{
           __html: pageData.content
         }}></div>

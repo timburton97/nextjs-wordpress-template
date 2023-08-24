@@ -1,7 +1,18 @@
 .headerContainer {
+    width: 100%;
+    height: 40vh;
+    min-height: 6em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+}
+
+.headerContainer h1 {
+    color: white;
+    text-transform: uppercase;
 }
 
 .headerItem {
@@ -13,7 +24,7 @@
     padding: 10px 20px;
     display: flex;
     text-decoration: none;
-    color: #444;
+    color: white;
     font-family: 'Montserrat';
     text-transform: uppercase;
     font-size: 1.4em;
@@ -21,4 +32,9 @@
 
 .headerItem:hover {
     border-bottom: 2px solid #999999;
+}
+
+.navBar {
+    background-color: #222;
+    height: 60px;
 }
