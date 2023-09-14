@@ -28,7 +28,7 @@ export default function BlogHome({ allPosts, menuItems }) {
                 <div className={styles.header}>
                     <h1>This is the blog home page</h1>
                 </div>
-                <section class={styles.postList}>
+                <section className={styles.postList}>
                     <h2>Our Latest Blogs</h2>
                     <ul>
                         {

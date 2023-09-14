@@ -13,8 +13,8 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
             </Head>
 
-            <header class="absolute top-0 w-full flex flex-row z-100 justify-between px-20 py-10 items-center">
-                <div class="relative z-1000">
+            <header className="absolute top-0 w-full flex flex-row z-100 justify-between px-20 py-10 items-center">
+                <div className="relative z-1000">
                     <Image
                         src='/header-logo.svg'
                         width={350}
@@ -22,19 +22,19 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                         alt="Header Logo"
                     />
                 </div>
-                <div class="flex justify-end items-center">
-                    <div class="w-full flex flex-row bg-transparent justify-items-center">
+                <div className="flex justify-end items-center">
+                    <div className="w-full flex flex-row bg-transparent justify-items-center">
                         
                         {   
                             menuItems.map((item) => (
-                                <div class="flex text-white hover:text-[#8DC63F] duration-300 flex-grow" key={item.label}>
-                                    <Link class="flex justify-center items-center p-4 h-full w-full text-xl" href={item.path}>{item.label}</Link>
+                                <div className="flex text-white hover:text-[#8DC63F] duration-300 flex-grow" key={item.label}>
+                                    <Link className="flex justify-center items-center p-4 h-full w-full text-xl" href={item.path}>{item.label}</Link>
                                 </div>
                             ))
                         }
                     </div>
-                    <div class="flex w-52 justify-between">
-                        <div class="flex w-[46px] h-[46px] border-2 border-white rounded-full align-center justify-center">
+                    <div className="flex w-52 justify-between">
+                        <div className="flex w-[46px] h-[46px] border-2 border-white rounded-full align-center justify-center">
                             <Image 
                                 src='/icon-linkedin.svg'
                                 width={15.144}
@@ -43,7 +43,7 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                             />
                         </div>
 
-                        <div class="flex w-[46px] h-[46px] border-2 border-white rounded-full align-center justify-center">
+                        <div className="flex w-[46px] h-[46px] border-2 border-white rounded-full align-center justify-center">
                             <Image 
                                 src='/icon-phone.svg'
                                 width={16.792}
@@ -52,7 +52,7 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                             />
                         </div>
 
-                        <div class="flex w-[46px] h-[46px] border-2 border-white rounded-full align-center justify-center">
+                        <div className="flex w-[46px] h-[46px] border-2 border-white rounded-full align-center justify-center">
                             <Image 
                                 src='/icon-email.svg'
                                 width={17.512}
@@ -64,8 +64,8 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                 </div>
                 
             </header>
-            <div class={styles.headerContainer} style={{ backgroundImage:`url(${headerImage ? headerImage.mediaItemUrl : "/placeholder.png"})`}}>
-                <h1 class="text-8xl text-center w-[830px] normal-case">{title}</h1>
+            <div className={styles.headerContainer} style={{ backgroundImage:`url(${headerImage ? headerImage.mediaItemUrl : "/placeholder.png"})`}}>
+                <h1 className="text-8xl text-center w-[830px] normal-case">{title}</h1>
             </div>
         </>
     );
