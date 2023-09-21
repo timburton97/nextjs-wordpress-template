@@ -41,7 +41,7 @@ export default function FooterComponent({ footerMenuItems }) {
                 </div>
 
                 <div className="w-1/3">
-                    <h3 className="text-2xl font-bold">Sign up for our newsletter</h3>
+                    <h3 className="text-2xl font-bold">Sign up for our newsletter:</h3>
                     <p>Form goes here</p>
                 </div>
             </div>
