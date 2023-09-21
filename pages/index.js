@@ -49,7 +49,6 @@ export default function Home({ pageData, menuItems, tripleCtaItems, founderFlipC
           xCol2Width={55}
           yCol1Height={33}
           yCol2Height={67}
-          justParagraph={false}
         />
 
         <FounderFlipCardsComponent
