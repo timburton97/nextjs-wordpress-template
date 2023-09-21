@@ -15,7 +15,7 @@ export default function TriMasonryColsComponent({ triMasonryColsItems, xCol1Widt
 
                             <h3 className="text-[#003057] text-5xl font-bold">{item.triMasonryColContent.subtitle}</h3>
 
-                            <p className="py-7">{item.triMasonryColContent.paragraph}</p>
+                            <p className="py-7 text-[#818080] text-xl max-w-[585px]">{item.triMasonryColContent.paragraph}</p>
 
                             <Link className="bg-[#8DC63F] px-6 py-4 rounded-full max-w-[276px] text-center text-white" href={item.triMasonryColContent.buttonLink.uri}>{item.triMasonryColContent.buttonText}</Link>
                             

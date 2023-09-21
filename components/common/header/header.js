@@ -65,7 +65,7 @@ export default function HeaderComponent({ menuItems, headerImage, title }) {
                 
             </header>
             <div className={styles.headerContainer} style={{ backgroundImage:`url(${headerImage ? headerImage.mediaItemUrl : "/placeholder.png"})`}}>
-                <h1 className="text-8xl text-center w-[830px] normal-case">{title}</h1>
+                <h1 className="text-8xl text-center normal-case flex flex-col">{title}</h1>
             </div>
         </>
     );
