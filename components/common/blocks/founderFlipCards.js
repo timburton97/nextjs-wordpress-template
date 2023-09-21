@@ -26,7 +26,7 @@ export default function FounderFlipCardsComponent({ founderFlipCardItems }) {
             </div>
             
             <h4 className="text-[#003057] text-2xl">We can help you with any of these options,</h4>
-            <h4 className="text-[#8DC63F] text-2xl">get in touch to find out how</h4>
+            <h4 className="text-[#8DC63F] text-2xl font-bold">get in touch to find out how</h4>
         </div>
     );
 }
